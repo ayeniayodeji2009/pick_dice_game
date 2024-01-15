@@ -15,7 +15,7 @@
 
 
 // Check if the screen width is less than 785 pixels
-if (window.innerWidth < 785) {
+if (window.innerWidth < 900) {
     // Show an alert to prompt the user to rotate the device
     alert("For the best experience, please rotate your device to landscape mode.");
   } else {
