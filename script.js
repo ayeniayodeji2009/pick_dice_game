@@ -1,4 +1,46 @@
 //'use strict';
+
+// // Check if the initial orientation is portrait
+// if (window.matchMedia("(orientation: portrait)").matches) {
+//     alert("For the best experience, please rotate your device to landscape mode.");
+//   }
+  
+//   // Listen for orientation change events
+//   window.addEventListener("orientationchange", function() {
+//     // Check if the new orientation is portrait
+//     if (window.matchMedia("(orientation: portrait)").matches) {
+//       alert("For the best experience, please rotate your device to landscape mode.");
+//     }
+//   });
+
+
+// Check if the screen width is less than 785 pixels
+if (window.innerWidth < 785) {
+    // Show an alert to prompt the user to rotate the device
+    alert("For the best experience, please rotate your device to landscape mode.");
+  } else {
+    // Show the content if the width is greater than or equal to 360 pixels
+    document.body.style.display = "block";
+  }
+
+
+// // Get the screen width
+// let screenWidth = window.screen.width;
+
+// // Check if the screen width is 360
+// if (screenWidth == 360) {
+//   // Try to lock the orientation to landscape
+//   try {
+//     screen.orientation.lock('landscape');
+//   } catch (error) {
+//     // Handle the error
+//     console.error(error);
+//   }
+// }
+
+
+
+
 var scores, roundScore, activePlayer, dice, gamePlaying;
 
 
@@ -15,7 +57,7 @@ document.querySelector('.btn--roll').addEventListener('click', function(){
     // 2. Display the result
     var diceDOM = document.querySelector('.dice')
     diceDOM.style.display = 'block';
-    diceDOM.src = 'dice-' + dice + '.png';
+    diceDOM.src = 'images/dice-' + dice + '.png';
 
     // 3. Update the round score IF the rolled number was NOT a 1
     if (dice !== 1){
