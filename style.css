@@ -14,8 +14,8 @@ html {
 body {
   font-family: 'Nunito', sans-serif;
   font-weight: 400;
-  width: 95vw;
-  height: 95vh;
+  width: 95vw; /**/
+  height: 95vh; /**/
   max-height: 500px;
   color: #333;
   background-image: linear-gradient(to top left, #753682 0%, #bf2e34 100%);
@@ -28,8 +28,8 @@ body {
 /* LAYOUT */
 main {
   position: relative;
-  width: 100vw;
-  height: 100vh;
+  width: 100vw; /**/
+  height: 100vh; /**/
   /* width: 100rem;
   height: 60rem; */
   background-color: rgba(255, 255, 255, 0.35);
@@ -43,7 +43,7 @@ main {
 }
 
 .player {
-  flex: 100%;
+  flex: 50%; /*Check back on this later, original was 50%, trying to see if new will be 100%*/
   padding: 9rem;
   display: flex;
   flex-direction: column;
@@ -55,7 +55,7 @@ main {
 /* ELEMENTS */
 .name {
   position: relative;
-  font-size: 2rem;
+  font-size: 2rem; /**/
   text-transform: uppercase;
   letter-spacing: 1px;
   word-spacing: 2px;
@@ -64,7 +64,7 @@ main {
 }
 
 .score {
-  font-size: 4rem;
+  font-size: 4rem; /**/
   font-weight: 300;
   color: #c7365f;
   margin-bottom: auto;
@@ -98,12 +98,12 @@ main {
 .current-label {
   text-transform: uppercase;
   margin-bottom: 1rem;
-  font-size: 0.85rem;
+  font-size: 0.85rem; /**/
   color: #ddd;
 }
 
 .current-score {
-  font-size: 1.75rem;
+  font-size: 1.75rem; /**/
 }
 
 /* ABSOLUTE POSITIONED ELEMENTS */
@@ -115,7 +115,7 @@ main {
   background: none;
   border: none;
   font-family: inherit;
-  font-size: 0.9rem;
+  font-size: 0.9rem; /**/
   text-transform: uppercase;
   cursor: pointer;
   font-weight: 400;
@@ -131,7 +131,7 @@ main {
 }
 
 .btn::first-letter {
-  font-size: 1.2rem;
+  font-size: 1.2rem; /**/
   display: inline-block;
   margin-right: 0.7rem;
 }
@@ -140,10 +140,10 @@ main {
   top: 4rem;
 }
 .btn--roll {
-  top: 19.65rem;
+  top: 19.65rem; /**/
 }
 .btn--hold {
-  top: 23.05rem;
+  top: 23.05rem; /**/
 }
 
 .btn:active {
@@ -176,20 +176,66 @@ main {
   font-weight: 700;
   color: #c7365f;
 }
-
+/*Media query for phone portrait not to display unless rotated to landscape is done*/
 @media (orientation: portrait) and (max-width: 900px) {
   body {
     display: none; /* Hide the content initially */
   }
 }
 
-/* @media (orientation: landscape) {
-  .player {
-    flex: 50%;
-    padding: 4.5rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    transition: all 0.75s;
-  } 
-}*/
+/*Note, For cross platform responsivenes, display for landscape on phone is the default css code above,
+ then followed by this below for larger screen*/
+
+/*Media Query to fit for larger screen size e.g, laptop and above*/
+@media (orientation: landscape) and (min-width: 900px) {
+  body {
+    width: 100vw; /**/
+    height: 100vh; /**/
+  }
+
+  main {   
+    width: 100rem;
+    height: 60rem;
+    margin: 8.5% auto 6.5%; /*Note this to be looked in*/
+  }
+
+  .name {
+    font-size: 4rem; /**/
+  }
+
+  .score {
+    font-size: 8rem; /**/
+  }
+
+  .current-label {  
+    font-size: 1.7rem; /**/
+  }
+
+  .current-score {
+    font-size: 3.5rem; /**/
+  }
+
+  .btn {
+    font-size: 1.8rem; /**/
+  }
+  
+  .btn::first-letter {
+    font-size: 2.4rem; /**/
+  }
+
+  .btn--roll {
+    top: 39.3rem; /**/
+  }
+
+  .btn--hold {
+    top: 46.1rem; /**/
+  }
+
+  .dice {  
+    top: 16.5rem; /*16.5rem*/
+    width: 17.5rem; /*17.5rem*/
+    min-width: 8rem; /*8rem*/
+    height: 17.5rem; /*17.5rem*/
+    min-height: 8rem; /*8rem*/
+  }
+}
