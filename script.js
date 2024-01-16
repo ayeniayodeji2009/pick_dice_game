@@ -21,6 +21,7 @@ if (window.innerWidth < 900) {
   } else {
     // Show the content if the width is greater than or equal to 360 pixels
     document.body.style.display = "block";
+    // document.write("Hello, world!")
   }
 
 

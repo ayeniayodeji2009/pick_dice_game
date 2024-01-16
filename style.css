@@ -14,8 +14,8 @@ html {
 body {
   font-family: 'Nunito', sans-serif;
   font-weight: 400;
-  width: 95vw; /**/
-  height: 95vh; /**/
+  width: 95vw; /*adjusted in media query*/
+  height: 95vh; /*adjusted in media query*/
   max-height: 500px;
   color: #333;
   background-image: linear-gradient(to top left, #753682 0%, #bf2e34 100%);
@@ -28,10 +28,8 @@ body {
 /* LAYOUT */
 main {
   position: relative;
-  width: 100vw; /**/
-  height: 100vh; /**/
-  /* width: 100rem;
-  height: 60rem; */
+  width: 100vw; /*adjusted in media query*/
+  height: 100vh; /*adjusted in media query*/
   background-color: rgba(255, 255, 255, 0.35);
   backdrop-filter: blur(200px);
   filter: blur();
@@ -55,7 +53,7 @@ main {
 /* ELEMENTS */
 .name {
   position: relative;
-  font-size: 2rem; /**/
+  font-size: 2rem; /*adjusted in media query*/
   text-transform: uppercase;
   letter-spacing: 1px;
   word-spacing: 2px;
@@ -64,7 +62,7 @@ main {
 }
 
 .score {
-  font-size: 4rem; /**/
+  font-size: 4rem; /*adjusted in media query*/
   font-weight: 300;
   color: #c7365f;
   margin-bottom: auto;
@@ -98,24 +96,24 @@ main {
 .current-label {
   text-transform: uppercase;
   margin-bottom: 1rem;
-  font-size: 0.85rem; /**/
+  font-size: 0.85rem; /*adjusted in media query*/
   color: #ddd;
 }
 
 .current-score {
-  font-size: 1.75rem; /**/
+  font-size: 1.75rem; /*adjusted in media query*/
 }
 
 /* ABSOLUTE POSITIONED ELEMENTS */
 .btn {
   position: absolute;
-  left: 50%;
+  left: 46.5%;
   transform: translateX(-25%);
   color: #444;
   background: none;
   border: none;
   font-family: inherit;
-  font-size: 0.9rem; /**/
+  font-size: 0.9rem; /*adjusted in media query*/
   text-transform: uppercase;
   cursor: pointer;
   font-weight: 400;
@@ -131,7 +129,7 @@ main {
 }
 
 .btn::first-letter {
-  font-size: 1.2rem; /**/
+  font-size: 1.2rem; /*adjusted in media query*/
   display: inline-block;
   margin-right: 0.7rem;
 }
@@ -140,14 +138,14 @@ main {
   top: 4rem;
 }
 .btn--roll {
-  top: 19.65rem; /**/
+  top: 19.65rem; /*adjusted in media query*/
 }
 .btn--hold {
-  top: 23.05rem; /**/
+  top: 23.05rem; /*adjusted in media query*/
 }
 
 .btn:active {
-  transform: translate(-50%, 3px);
+  transform: translate(50%, 1px);
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
 }
 
@@ -159,12 +157,12 @@ main {
   border-radius: 9%;
   position: absolute;
   left: 50%;
-  top: 8.25rem; /*16.5rem*/
+  top: 8.25rem; /*adjusted in media query*/
   transform: translateX(-50%);
-  width: 8.75rem; /*17.5rem*/
-  min-width: 4rem; /*8rem*/
-  height: 8.75rem; /*17.5rem*/
-  min-height: 4rem; /*8rem*/
+  width: 8.75rem; /*adjusted in media query*/
+  min-width: 4rem; /*adjusted in media query*/
+  height: 8.75rem; /*adjusted in media query*/
+  min-height: 4rem; /*adjusted in media query*/
   box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.2);
 }
 
